@@ -26,7 +26,7 @@ Commonly used helpers for jupyter notebooks.
 Features
 --------
 
-* TODO
+Functions usable in general Jupyter notebooks. Keep repeated implementation of helpers out of the notebook and re-use them easily.
 
 Credits
 -------
