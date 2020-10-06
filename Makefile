@@ -33,7 +33,7 @@ TEST_REPORT = $(REPORTS_DIR)unittests.xml
 help:
 	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
 
-clean: clean-build clean-pyc clean-test ## remove all build, test, coverage and Python artifacts
+clean: clean-build clean-pyc clean-test clean-temp ## remove all build, test, coverage and Python artifacts
 
 clean-build: ## remove build artifacts
 	rm -fr build/
@@ -54,6 +54,9 @@ clean-test: ## remove test and coverage artifacts
 	rm -fr htmlcov/
 	rm -fr .pytest_cache
 	rm -fr reports/
+
+clean-temp: ## remove temporary files
+	rm -rf *~
 
 lint: | reports ## check style with flake8
 	flake8 --output-file $(FLAKE8_REPORT) --benchmark --count --statistics jupyter_commons tests
