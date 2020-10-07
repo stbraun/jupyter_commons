@@ -1,25 +1,10 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """Tests for `jupyter_commons` package."""
-
-import pytest
-
-
-from jupyter_commons import info
+import jupyter_commons.output as jc_out
 
 
-@pytest.fixture
-def response():
-    """Sample pytest fixture.
-
-    See more at: http://doc.pytest.org/en/latest/fixture.html
-    """
-    # import requests
-    # return requests.get('https://github.com/audreyr/cookiecutter-pypackage')
-
-
-def test_content(response):
-    """Sample pytest test function with the pytest fixture as an argument."""
-    # from bs4 import BeautifulSoup
-    # assert 'GitHub' in BeautifulSoup(response.content).title.string
+def test_colorize():
+    """Test colorization of string."""
+    assert "lightblue" in jc_out.colorize("some message", color="lightblue")
+    assert "darkgreen" in jc_out.colorize("some message", color="darkgreen")

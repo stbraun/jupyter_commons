@@ -65,7 +65,7 @@ test: | reports ## run tests quickly with the default Python
 	pytest --doctest-modules --junit-xml=$(TEST_REPORT) jupyter_commons tests
 
 test-all: ## run tests on every Python version with tox
-	tox
+	nox
 
 coverage: ## check code coverage quickly with the default Python
 	coverage run --source jupyter_commons -m pytest

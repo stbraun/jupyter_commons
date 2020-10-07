@@ -6,7 +6,6 @@ verify_ssl = true
 [dev-packages]
 watchdog = "*"
 flake8 = "*"
-tox = "*"
 coverage = "*"
 sphinx = "*"
 twine = "*"
@@ -14,7 +13,7 @@ pytest = "*"
 pytest-runner = "*"
 pytest-watch = "*"
 bump2version = "*"
-tox-pipenv = "*"
+nox = "*"
 
 [packages]
 matplotlib = "*"
