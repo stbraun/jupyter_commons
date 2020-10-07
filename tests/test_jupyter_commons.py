@@ -6,7 +6,7 @@
 import pytest
 
 
-from jupyter_commons import jupyter_commons
+from jupyter_commons import info
 
 
 @pytest.fixture

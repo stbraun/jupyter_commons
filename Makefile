@@ -1,4 +1,4 @@
-.PHONY: clean clean-test clean-pyc clean-build reports docs help
+.PHONY: clean clean-test clean-pyc clean-build clean-temp reports docs help
 .DEFAULT_GOAL := help
 
 define BROWSER_PYSCRIPT

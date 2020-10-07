@@ -13,8 +13,11 @@ twine = "*"
 pytest = "*"
 pytest-runner = "*"
 pytest-watch = "*"
+bump2version = "*"
 
 [packages]
+matplotlib = "*"
+ipython = "*"
 
 [requires]
 python_version = "3.8"

@@ -24,4 +24,4 @@ deploy:
   on:
     tags: true
     repo: stbraun/jupyter_commons
-    python: 3.7
+    python: 3.8
