@@ -18,7 +18,7 @@ setup(
     author="Stefan Braun",
     author_email='sb@stbraun.com',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 4 - Beta ',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Natural Language :: English',
