@@ -5,10 +5,11 @@ python:
 before_install:
     - pip install -U pipenv
     - pipenv install --dev
-install:
+install: skip
 script:
     - make lint
     - make test
+    - make docs
 deploy:
   provider: pypi
   distributions: sdist bdist_wheel
