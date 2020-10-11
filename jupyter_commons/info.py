@@ -7,8 +7,13 @@ import platform
 from platform import python_version
 
 
-def system_info():
-    """ Print versions of imported packages. """
+def system_info(globs: dict) -> None:
+    """ Print versions of imported packages.
+
+    Looks for select packages if imported and prints version info.
+
+    :param globs: globals() of calling code.
+    """
     print("-- System --")
     print("os name: %s" % os.name)
     print("system: %s" % platform.system())
@@ -18,13 +23,14 @@ def system_info():
     print("version: %s" % python_version())
     print()
     print("-- Python Packages --")
-    globs = globals()
     if 'jupyterlab' in globs:
         print("jupyterlab==%s" % globs['jupyterlab'].__version__)
     if 'np' in globs:
         print("numpy==%s" % globs['np'].__version__)
     if 'pd' in globs:
         print("pandas==%s" % globs['pd'].__version__)
+    if 'nx' in globs:
+        print("networkX==%s" % globs['nx'].__version__)
     if 'scipy' in globs:
         print("scipy==%s" % globs['scipy'].__version__)
     if 'sklearn' in globs:

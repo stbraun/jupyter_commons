@@ -10,8 +10,6 @@ Welcome to Jupyter Commons's documentation!
    usage
    modules
    contributing
-   authors
-   history
 
 Indices and tables
 ==================

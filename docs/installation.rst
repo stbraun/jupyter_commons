@@ -1,4 +1,4 @@
-.. highlight:: shell
+ma.. highlight:: shell
 
 ============
 Installation

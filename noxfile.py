@@ -4,13 +4,15 @@
 import nox
 
 
-@nox.session(python=['3.7', '3.8'])
-def tests(session):
-    session.run("pipenv", "install", external=True)
-    session.run("pytest", "tests/")
-
-
 @nox.session(python=['3.8'])
 def lint(session):
+    """Run static analysis."""
     session.run("pipenv", "install", external=True)
     session.run("flake8", "jupyter_commons/", "tests/")
+
+
+@nox.session(python=['3.7', '3.8'])
+def tests(session):
+    """Run tests for all supported versions of Python."""
+    session.run("pipenv", "install", external=True)
+    session.run("pytest", "tests/")
