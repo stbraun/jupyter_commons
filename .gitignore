@@ -106,3 +106,5 @@ ENV/
 .*~
 *~
 .idea/
+/docs/modules.rst
+/docs/jupyter_commons.rst
