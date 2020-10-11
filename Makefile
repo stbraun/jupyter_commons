@@ -64,7 +64,7 @@ lint: | reports ## check style with flake8
 test: | reports ## run tests quickly with the default Python
 	pytest --doctest-modules --junit-xml=$(TEST_REPORT) jupyter_commons tests
 
-test-all: ## run tests on every Python version with tox
+test-all: ## run tests on every Python version with nox
 	nox
 
 coverage: ## check code coverage quickly with the default Python
