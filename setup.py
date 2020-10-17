@@ -28,6 +28,7 @@ setup(
     ],
     description="Commonly used helpers for jupyter notebooks.",
     install_requires=requirements,
+    requires=requirements,
     license="BSD license",
     long_description=readme,
     include_package_data=True,

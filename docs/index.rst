@@ -1,5 +1,5 @@
 Welcome to Jupyter Commons's documentation!
-======================================
+=======================================
 
 .. toctree::
    :maxdepth: 2
