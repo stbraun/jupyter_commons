@@ -1,15 +1,17 @@
 language: python
 python:
-- 3.7
-- 3.8
+  - 3.7
+  - 3.8
+  - 3.9
+
 before_install:
-    - pip install -U pipenv
-    - pipenv install --dev
-install: skip
+    - pip install --upgrade pip
+    - pip install pipenv
+    - pipenv lock -r > requirements.txt
+install: pip install -r requirements.txt
 script:
     - make lint
     - make test
-    - make docs
 deploy:
   provider: pypi
   distributions: sdist bdist_wheel
