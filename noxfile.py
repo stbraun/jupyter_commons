@@ -8,11 +8,11 @@ import nox
 def lint(session):
     """Run static analysis."""
     session.run("pipenv", "install", external=True)
-    session.run("flake8", "jupyter_commons/", "tests/")
+    session.run("flake8", "jupyter_commons/", "tests/", external=True)
 
 
 @nox.session(python=['3.7', '3.8'])
 def tests(session):
     """Run tests for all supported versions of Python."""
     session.run("pipenv", "install", external=True)
-    session.run("pytest", "tests/")
+    session.run("pytest", "tests/", external=True)

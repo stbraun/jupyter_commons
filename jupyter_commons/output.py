@@ -17,12 +17,12 @@ LOG_FORMAT = (
 )
 
 
-def show_all_items():
+def show_all_items() -> None:
     """ Show multiple items in output of a cell"""
     InteractiveShell.ast_node_interactivity = "all"
 
 
-def configure_logging(log_to_file=False):
+def configure_logging(log_to_file: bool = False) -> None:
     """Configure basic logging framework.
 
     :param log_to_file: True to log to file, False to log on console only.
@@ -35,7 +35,7 @@ def configure_logging(log_to_file=False):
     logging.info("Restarting notebook ...")
 
 
-def print_md(msg, color=None):
+def print_md(msg: str, color: str = None) -> None:
     """Print message with Markdown support.
 
     The message supports markdown syntax like **bold** or _italics_.
@@ -47,26 +47,26 @@ def print_md(msg, color=None):
     ipd.display(ipd.Markdown(color_msg))
 
 
-def colorize(msg, color=None):
+def colorize(msg: str, color: str = None) -> str:
     """Prepare a sub-msg for printing colorized with print_md()."""
     return "<span style='color:{}'>{}</span>".format(color, msg)
 
 
-def msg_blue(msg):
+def msg_blue(msg: str) -> str:
     """Prepare blue message."""
     return colorize(msg, color='blue')
 
 
-def msg_green(msg):
+def msg_green(msg: str) -> str:
     """Prepare green message."""
     return colorize(msg, color='green')
 
 
-def msg_red(msg):
+def msg_red(msg: str) -> str:
     """Prepare red message."""
     return colorize(msg, color='red')
 
 
-def highlight(msg, color='yellow'):
+def highlight(msg: str, color: str = 'yellow') -> str:
     """Prepare a sub-msg for printing highlighted with print_md()."""
     return "<span style='background:{}'>{}</span>".format(color, msg)

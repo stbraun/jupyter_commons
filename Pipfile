@@ -16,7 +16,6 @@ bump2version = "*"
 nox = "*"
 
 [packages]
-matplotlib = "*"
 ipython = "*"
 
 [requires]
